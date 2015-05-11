@@ -1,4 +1,20 @@
 <h1>Photo Details</h1>
 
-<p><img src="<%= @photo_selected.source %>" width="800"></p>
-<p><%= @photo_selected.caption %></p>
+<table>
+  <tr>
+    <td>
+      <img src="<%= @photo_selected.source %>" width="800">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= @photo_selected.caption %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="http://localhost:3000/photos/">Back</a>
+            <a href="http://localhost:3000/photos/<%= @photo_selected.id %>/edit">Edit</a>
+      <a href="http://localhost:3000/delete_photo/<%= @photo_selected.id %>">Delete</a>
+  </tr>
+</table>
